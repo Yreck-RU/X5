@@ -1,106 +1,6 @@
 
-	
 
-$(document).ready(function() {
 
-	let p = 0;
-	let z = 0;
-	let rodit = $( "#port2" ).offset();
-	let l1 = $( "#port1" ).offset();
-	let l2 = $( "#port3" ).offset();
-	let l3 = $( "#port4" ).offset();
-	let l4 = $( "#port5" ).offset();
-	let l5 = $( "#port6" ).offset();
-	let l6 = $( "#port7" ).offset();
-	let l7 = $( "#port8" ).offset();
-	let l8 = $( "#port9" ).offset();
-	let l9 = $( "#port10" ).offset();
-
-	let cum1 = (+l1.top - +rodit.top)+ 10;
-	$('#line1').css("top", ""+cum1+"px");
-
-	let cum2 = (+l2.top - +rodit.top)+ 10;
-	$('#line2').css("top", ""+cum2+"px");
-
-	let cum3 = (+l3.top - +rodit.top)+ 10;
-	$('#line3').css("top", ""+cum3+"px");
-
-	let cum4 = (+l4.top - +rodit.top)+ 10;
-	$('#line4').css("top", ""+cum4+"px");
-
-	let cum5 = (+l5.top - +rodit.top)+ 10;
-	$('#line5').css("top", ""+cum5+"px");
-
-	let cum6 = (+l6.top - +rodit.top)+ 10;
-	$('#line6').css("top", ""+cum6+"px");
-
-	let cum7 = (+l7.top - +rodit.top)+ 10;
-	$('#line7').css("top", ""+cum7+"px");
-
-	let cum8 = (+l8.top - +rodit.top)+ 10;
-	$('#line8').css("top", ""+cum8+"px");
-
-	let cum9 = (+l9.top - +rodit.top)+ 10;
-	$('#line9').css("top", ""+cum9+"px");
-
-	function adapuyt(){
-		let rodit = $( "#port2" ).offset();
-		let l1 = $( "#port1" ).offset();
-		let l2 = $( "#port3" ).offset();
-		let l3 = $( "#port4" ).offset();
-		let l4 = $( "#port5" ).offset();
-		let l5 = $( "#port6" ).offset();
-		let l6 = $( "#port7" ).offset();
-		let l7 = $( "#port8" ).offset();
-		let l8 = $( "#port9" ).offset();
-		let l9 = $( "#port10" ).offset();
-
-		let cum1 = (+l1.top - +rodit.top)+ 10;
-		$('#line1').css("top", ""+cum1+"px");
-
-		let cum2 = (+l2.top - +rodit.top)+ 10;
-		$('#line2').css("top", ""+cum2+"px");
-
-		let cum3 = (+l3.top - +rodit.top)+ 10;
-		$('#line3').css("top", ""+cum3+"px");
-
-		let cum4 = (+l4.top - +rodit.top)+ 10;
-		$('#line4').css("top", ""+cum4+"px");
-
-		let cum5 = (+l5.top - +rodit.top)+ 10;
-		$('#line5').css("top", ""+cum5+"px");
-
-		let cum6 = (+l6.top - +rodit.top)+ 10;
-		$('#line6').css("top", ""+cum6+"px");
-
-		let cum7 = (+l7.top - +rodit.top)+ 10;
-		$('#line7').css("top", ""+cum7+"px");
-
-		let cum8 = (+l8.top - +rodit.top)+ 10;
-		$('#line8').css("top", ""+cum8+"px");
-
-		let cum9 = (+l9.top - +rodit.top)+ 10;
-		$('#line9').css("top", ""+cum9+"px");
-	}
-	adapuyt();
-	window.addEventListener('resize', function(event){
-		adapuyt();
-	});
-	/*
-	window.addEventListener('resize' , function (event){
-		const viewport_width =Math.max(document.documentElement.clientWidth);
-		if (viewport_width > 1200) {
-			adapuyt();
-		}
-		if (viewport_width <= 1200) {
-			adapuyt();
-		}
-	});*/
-
-	$('.playpause').click(function(event) {
-		$('.playpause').toggleClass('activ');
-	});
-});
 function ibg(){
 		let ibg=document.querySelectorAll(".ibg");
 	for (var i = 0; i < ibg.length; i++) {
@@ -144,9 +44,12 @@ if (ButtonOne) {
 }
 if (ButtonTwo) {
 	let TestNumber = 1;
+	let testItem = document.querySelector('._item');
+
 	ButtonTwo.addEventListener("click", function (e) {
 		if (TestSlaid2.classList.contains('_active')) {
 			Line.style.width ='9%';
+			testItem.innerText = 2;
 
 			if (document.querySelector('#radio-2').checked == true) {
 				TestNumber++;
@@ -157,6 +60,7 @@ if (ButtonTwo) {
 
 		} else if (TestSlaid3.classList.contains('_active')) {
 			Line.style.width ='18%';
+			testItem.innerText = 3;
 			if (document.querySelector('#radio-6').checked == true) {
 				TestNumber++;
 			}
@@ -166,6 +70,7 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid4.classList.contains('_active')) {
 			Line.style.width ='27%';
+			testItem.innerText = 4;
 			if (document.querySelector('#radio-10').checked == true) {
 				TestNumber++;
 			}
@@ -175,6 +80,7 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid5.classList.contains('_active')) {
 			Line.style.width ='36%';
+			testItem.innerText = 5;
 			if (document.querySelector('#radio-11').checked == true) {
 				TestNumber++;
 			}
@@ -184,6 +90,7 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid6.classList.contains('_active')) {
 			Line.style.width ='45%';
+			testItem.innerText = 6;
 			if (document.querySelector('#radio-18').checked == true) {
 				TestNumber++;
 			}
@@ -193,6 +100,7 @@ if (ButtonTwo) {
 			
 		}else if (TestSlaid7.classList.contains('_active')) {
 			Line.style.width ='54%';
+			testItem.innerText = 7;
 			if (document.querySelector('#radio-21').checked == true) {
 				TestNumber++;
 			}
@@ -202,6 +110,7 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid8.classList.contains('_active')) {
 			Line.style.width ='63%';
+			testItem.innerText = 8;
 			if (document.querySelector('#radio-26').checked == true) {
 				TestNumber++;
 			}
@@ -211,6 +120,7 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid9.classList.contains('_active')) {
 			Line.style.width ='72%';
+			testItem.innerText = 9;
 			if (document.querySelector('#radio-28').checked == true) {
 				TestNumber++;
 			}
@@ -220,6 +130,7 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid10.classList.contains('_active')) {
 			Line.style.width ='81%';
+			testItem.innerText = 10;
 			if (document.querySelector('#radio-33').checked == true) {
 				TestNumber++;
 			}
@@ -229,12 +140,14 @@ if (ButtonTwo) {
 			
 		} else if (TestSlaid11.classList.contains('_active')) {
 			Line.style.width ='90%';
+			testItem.innerText = 11;
 			
 			TestSlaid11.classList.remove('_active');
 			TestSlaid12.classList.toggle('_active');
 			
 		} else if (TestSlaid12.classList.contains('_active')) {
 			Line.style.width ='100%';
+			testItem.innerText = 12;
 
 			if (TestNumber <= 4) { 
 				TestSlaid12.classList.remove('_active');
