@@ -183,3 +183,62 @@ for (let anchor of anchors) {
     })
   })
 }
+
+
+
+/*==============================================*/
+
+
+
+const vedeoButton = document.querySelector('._video-button');
+const vedeo = document.querySelector('._video');
+
+if (vedeoButton) {
+	let vedeoLoad = true;
+	vedeoButton.addEventListener("click", function (e) {
+		vedeoButton.classList.add('_active');
+		
+		if (vedeo && vedeoButton && vedeoLoad) {
+			vedeo.src = vedeo.dataset.video;
+			vedeo.parentElement.load();
+			vedeo.parentNode.play();
+			vedeo.parentNode.classList.add('_active');
+			vedeoLoad = false;
+		}
+	});
+}
+
+/*============================================*/
+
+var heder = document.getElementById('elem');
+heder.classList.toggle('active', window.scrollY > 0);
+window.addEventListener('scroll', function(){
+	var heder = document.getElementById('elem');
+	heder.classList.toggle('active', window.scrollY > 0);
+});
+
+/*=============================================*/
+
+
+const InputTextQeuzs = document.querySelectorAll("._input-text-qeuz");
+
+if (InputTextQeuzs) {
+	for (var i = 0; i < InputTextQeuzs.length; i++) {
+		let inputTextQeuz = InputTextQeuzs[i];
+		let inputTextQeuzText;
+		inputTextQeuz.oninput = function() {
+			//console.log(inputTextQeuz.value);
+			//outputTextField.value = inputTextField.value;
+			inputTextQeuzText = inputTextQeuz.value;
+			if (inputTextQeuzText.length > 1) {
+				inputTextQeuzText = inputTextQeuzText[1];
+			}
+			/*alert(inputTextQeuzText);*/
+			if ( inputTextQeuzText == "а" || inputTextQeuzText == "А" || inputTextQeuzText == "б" || inputTextQeuzText == "Б" || inputTextQeuzText == "в" || inputTextQeuzText == "В" || inputTextQeuzText == "г" || inputTextQeuzText == "Г" || inputTextQeuzText == "д" || inputTextQeuzText == "Д" || inputTextQeuzText == "е" || inputTextQeuzText == "Е") {
+				inputTextQeuz.value = inputTextQeuzText;
+			} else {
+				inputTextQeuz.value = "";
+			}
+		};
+	}
+}

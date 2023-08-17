@@ -4,8 +4,14 @@
 <html lang="ru">
 	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 	<head>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="192x192"
+			href="img/Screenshot-(2).png"
+		/>
 		<!-- Заголовок страницы в браузере -->
-		<title>x5</title>
+		<title>Quiz</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<meta name="format-detection" content="telephone=no">
@@ -21,7 +27,7 @@
 	<body>
 		<div class="wpaper">
 			<header>
-				<div class="heder">
+				<div class="heder" id="elem">
 					<div class="container">
 						<div class="heder-body">
 							<div class="heder-body-blok">
@@ -81,7 +87,10 @@
 										<!--<img src="img/blok-2/2.png" alt="" class="Video-body-blok-img2">-->s
 										<div class="Video-body-blok-video-img ibg">
 											<img src="img/blok-2/1.png" alt="">
-											<div class="playpause">
+											<video controls="" class="Video-body-blok-video-img">
+												<source data-video="video/video.mp4" src="img/blok-2/1.png" type="video/mp4" class="_video">
+											</video>
+											<div class="playpause _video-button">
 												<span></span>
 											</div>
 										</div>
@@ -667,12 +676,12 @@
 												</div>
 											</div>
 											<div class="test-form__wraper-item">
-												<input type="text"  value="" class="test-form__item">
-												<input type="text"  value="" class="test-form__item">
-												<input type="text"  value="" class="test-form__item">
-												<input type="text"  value="" class="test-form__item">
-												<input type="text"  value="" class="test-form__item">
-												<input type="text"  value="" class="test-form__item">
+												<input type="text"  value="" class="test-form__item _input-text-qeuz">
+												<input type="text"  value="" class="test-form__item _input-text-qeuz">
+												<input type="text"  value="" class="test-form__item _input-text-qeuz">
+												<input type="text"  value="" class="test-form__item _input-text-qeuz">
+												<input type="text"  value="" class="test-form__item _input-text-qeuz">
+												<input type="text"  value="" class="test-form__item _input-text-qeuz">
 											</div>
 										</div>
 									</form>
